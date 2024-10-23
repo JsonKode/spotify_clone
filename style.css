@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px; /* Reduced padding for mobile */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #1db954; /* Spotify green */
+    font-size: 1.5em; /* Responsive font size */
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #282828;
+    color: #ffffff;
+    font-size: 1em; /* Responsive font size */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #1db954; /* Spotify green */
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em; /* Responsive font size */
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1aa34a; /* Darker green */
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#tracksList {
+    display: none;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #282828;
+}
+
+#tracksList li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tracksList li:last-child {
+    border-bottom: none; /* Remove last border */
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+audio {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.player button {
+    flex: none;
+    background: #1db954; /* Spotify green */
+}
+
+.player button:hover {
+    background: #1aa34a; /* Darker green */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em; /* Adjust heading size */
+    }
+
+    input[type="text"], button {
+        font-size: 0.9em; /* Slightly smaller font for mobile */
+    }
+
+    .player {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Stretch buttons to full width */
+    }
+
+    .player button {
+        width: 100%; /* Full width for mobile */
+        margin-top: 10px; /* Space between buttons */
+    }
+
+    #prevButton, #nextButton {
+        width: 100%; /* Full width for buttons */
+        margin-top: 10px; /* Space between buttons */
+    }
+}

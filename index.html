@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add some basic styles for the dropdown */
+        #tracksList {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        #tracksList.show {
+            display: block; /* Show when toggled */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spotify Music Search</h1>
+        <input type="text" id="searchInput" placeholder="Search for music...">
+        <button id="searchButton">Search</button>
+        
+        <div id="results">
+            <h2>Playlist</h2>
+            <button id="toggleTracksButton">Show Tracks</button> <!-- Dropdown toggle button -->
+            <ul id="tracksList"></ul>
+        </div>
+
+        <!-- Music Player -->
+        <div class="player">
+            <audio id="audioPlayer" controls></audio>
+            <button id="prevButton">Previous</button>
+            <button id="nextButton">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
